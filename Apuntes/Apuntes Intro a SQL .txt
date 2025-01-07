@@ -1,0 +1,19 @@
+
+
+Apuntes de Join
+Inner Join //es el más usado (trae resultado cuando la combinación existe)
+Left Join //prioriza lo de izquierda
+Right Join //prioriza lo de la derecha
+Full outer Join
+
+
+Ejemplo
+
+Select Titulo, Nombre From Peliculas P (Tanto P y R son alias)
+INNER JOIN Reparto R On P.IdDirector =R.Id
+
+
+Select P.Titulo, R.Nombre, R.Apellido From Peliculas P
+INNER Join [Peliculas.Reparto] PR On P.Id=PR.IdPelicula
+inner join Reparto R On PR.IdReparto =R.Id
+Where P.Id = 6

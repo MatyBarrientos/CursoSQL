@@ -1,0 +1,89 @@
+-- 1. Selección de Datos
+SELECT columna1, columna2
+FROM nombre_tabla
+WHERE condicion;
+
+-- Ejemplo:
+SELECT nombre, edad
+FROM empleados
+WHERE edad > 30;
+
+-- 2. Inserción de Datos
+INSERT INTO nombre_tabla (columna1, columna2)
+VALUES (valor1, valor2);
+
+-- Ejemplo:
+INSERT INTO empleados (nombre, edad)
+VALUES ('Juan', 35);
+
+-- 3. Actualización de Datos
+UPDATE nombre_tabla
+SET columna1 = valor1, columna2 = valor2
+WHERE condicion;
+
+-- Ejemplo:
+UPDATE empleados
+SET edad = 36
+WHERE nombre = 'Juan';
+
+-- 4. Eliminación de Datos
+DELETE FROM nombre_tabla
+WHERE condicion;
+
+-- Ejemplo:
+DELETE FROM empleados
+WHERE edad < 25;
+
+-- 5. Creación de Tablas
+CREATE TABLE nombre_tabla (
+    columna1 tipo_dato restriccion,
+    columna2 tipo_dato restriccion
+);
+
+-- Ejemplo:
+CREATE TABLE empleados (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    edad INT
+);
+
+-- 6. Eliminación de Tablas
+DROP TABLE nombre_tabla;
+
+-- Ejemplo:
+DROP TABLE empleados;
+
+-- 7. Consultas de Unión
+SELECT columna1, columna2
+FROM tabla1
+UNION
+SELECT columna1, columna2
+FROM tabla2;
+
+-- 8. Ordenación y Agrupación
+-- Ordenar:
+SELECT columna1
+FROM nombre_tabla
+ORDER BY columna1 ASC/DESC;
+
+-- Agrupar:
+SELECT columna1, COUNT(*)
+FROM nombre_tabla
+GROUP BY columna1;
+
+-- 9. Funciones Agregadas
+-- Suma: SUM(columna)
+-- Promedio: AVG(columna)
+-- Máximo: MAX(columna)
+-- Mínimo: MIN(columna)
+-- Contar: COUNT(columna)
+
+-- 10. Creación de Índices
+CREATE INDEX nombre_indice
+ON nombre_tabla (columna);
+
+-- 11. Cláusula JOIN
+SELECT t1.columna1, t2.columna2
+FROM tabla1 t1
+JOIN tabla2 t2
+ON t1.columna_comun = t2.columna_comun;
