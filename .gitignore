@@ -1,6 +1,8 @@
 # Ignorar archivos de GitHub
+*README
 *.README
 *.README.md
+
 
 
 # Ignorar directorios de construcción
