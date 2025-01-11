@@ -1,0 +1,12 @@
+# Ignorar archivos de GitHub
+*.README
+*.README.md
+
+
+# Ignorar directorios de construcción
+
+
+MundoPokemon/
+.vs/
+
+
